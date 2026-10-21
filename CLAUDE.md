@@ -1,6 +1,6 @@
 # Flower Lab Shop legal website
 
-The public pages of Flower Lab Shop's Instagram assistant (home, privacy policy, data deletion, terms, support), served by GitHub Pages from `main` at https://reyfen-org.github.io/Flower-Lab-Shop-Legal/. Each page has a Ukrainian and an English version; change both together. The service itself lives in the private repo `Reyfen/flower-lab-shop`.
+The public pages of Flower Lab Shop's Instagram assistant (home, privacy policy, data deletion, terms, support), served by GitHub Pages from `main` at https://reyfen-org.github.io/Flower-Lab-Shop-Legal/. Each page has an English and a Ukrainian version, English first; change both together. The service itself lives in the private repo `Reyfen/flower-lab-shop`.
 
 ## Ground rules
 
