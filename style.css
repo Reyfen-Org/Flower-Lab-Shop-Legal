@@ -1,0 +1,188 @@
+/* System fonts only: loading web fonts from a third party would send
+   visitors' IP addresses elsewhere, which the privacy policy says we don't do. */
+:root {
+  color-scheme: light;
+  --bg: #f4f6f8;
+  --surface: #ffffff;
+  --ink: #1c2230;
+  --muted: #566074;
+  --line: #d9dee7;
+  --accent: #a8325e;
+  --accent-soft: #f8e6ee;
+  --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #12151c;
+    --surface: #1a1e27;
+    --ink: #e6e8ee;
+    --muted: #9aa3b5;
+    --line: #2b313d;
+    --accent: #f29bbd;
+    --accent-soft: #3a2230;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+
+/* Header: shop name over a single stem-like curve, the one decorative element */
+.site-header {
+  padding: 2.5rem 0 1.5rem;
+}
+
+.brand {
+  display: inline-block;
+  color: var(--ink);
+  text-decoration: none;
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.contour {
+  display: block;
+  width: 100%;
+  height: 48px;
+  margin-top: 0.75rem;
+  color: var(--accent);
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.15rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover { color: var(--ink); }
+
+.site-nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
+.lang {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0 0 2rem;
+  font-size: 0.9rem;
+}
+
+.lang a {
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+main { padding-bottom: 3rem; }
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 5vw, 2.6rem);
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font-size: 1.35rem;
+  margin: 2.25rem 0 0.5rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin: 1.5rem 0 0.35rem;
+}
+
+p, ul { margin: 0 0 1rem; }
+
+ul { padding-left: 1.25rem; }
+
+li { margin-bottom: 0.35rem; }
+
+a { color: var(--accent); }
+
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.lede {
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.updated {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* The short summary at the top of the privacy policy and the data deletion page */
+.summary {
+  background: var(--surface);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.summary p:last-child { margin-bottom: 0; }
+
+.details {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+}
+
+.details p { margin: 0; }
+
+
+
+
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 1.5rem 0 2.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.site-footer a { color: var(--muted); }
